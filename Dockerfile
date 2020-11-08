@@ -59,6 +59,8 @@ RUN npm install --save redux-logger
 RUN npm install --save redux-thunk
 RUN npm install react-pose --save
 RUN npm install --save prop-types
+RUN npm install --save fetch-jsonp
+RUN npm install --save qs
 #RUN create-react-app ikemen-checker
 #RUN npm start
 

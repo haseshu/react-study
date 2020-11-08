@@ -2,17 +2,24 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Ranking from './components/Ranking';
+import { Route, Link } from 'react-router-dom';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ul>
+          <li><Link to ="/all">すべてのカテゴリ</Link></li>
+          <li><Link to ="/category/2502">パソコン、周辺機器</Link></li>
+          <li><Link to ="/category/10002">本、雑誌、コミック</Link></li>
+        </ul>
+        <Route path="/all" component = {Ranking} />
+        <Route path="/category/:id"
+        render={
+          ({match}) => <Ranking categoryId={match.params.id} />
+        } 
+        />
       </div>
     );
   }
