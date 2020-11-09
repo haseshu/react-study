@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import Ranking from './components/Ranking';
+import Ranking from './containers/Ranking';
 import { Route, Link } from 'react-router-dom';
 
 class App extends Component {
