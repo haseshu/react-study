@@ -1,6 +1,7 @@
 const getRanking = responce =>{
     const ranking = [];
-    const itemLength = responce.ResultSet.totalResultsReturned
+    console.log(responce);
+    const itemLength = responce.ResultSet["totalResultsReturned"]
     for(let index = 0;index < itemLength; index++){
         const item = responce.ResultSet['0'].Result[index + ''];
         ranking.push({
@@ -33,7 +34,7 @@ export default (state =initialState, action) =>{
             ?{...state, error:true}
             :{
                 ...state,
-                ranking:getRanking(action.payload.responce)
+                ranking:getRanking(action.payload.response)
             };
         
         default: return state;

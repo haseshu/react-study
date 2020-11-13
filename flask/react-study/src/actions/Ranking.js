@@ -40,7 +40,7 @@ export const fetchRanking =categoryId =>{
         try{
             //const responce = await fetchJsonp('${API_URL}?${queryString}');
             const responce = await fetchJsonp('https://shopping.yahooapis.jp/ShoppingWebService/V1/json/categoryRanking?appid=dj00aiZpPXZQcldzYzd5RmhzbSZzPWNvbnN1bWVyc2VjcmV0Jng9YzI-&category_id=2494');
-            console.log('${API_URL}?${queryString}');
+            console.log(API_URL + "?" + queryString);
             const data = await responce.json();
             dispatch(receiveData(categoryId, null, data));
         }catch (err){

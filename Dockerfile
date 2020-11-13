@@ -52,7 +52,7 @@ RUN npm install @material-ui/core
 RUN npm install --save react-addons-css-transition-group
 RUN npm install --save react-router-dom
 RUN npm install --save react-router-redux
-RUN npm install --save history
+RUN npm install --save history@4.7.2
 RUN npm install --save connected-react-router
 RUN npm install --save react-router
 RUN npm install --save redux-logger
