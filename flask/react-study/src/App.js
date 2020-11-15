@@ -5,13 +5,24 @@ import Ranking from './containers/Ranking';
 import Nav from './containers/Nav';
 import { Switch, Route, Link, Redirect } from 'react-router-dom';
 
+import Reboot from '@material-ui/core/Button';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{paddingLeft:240}}>
+        <Reboot/>
+        <AppBar style={{paddingLeft:240}}>
+          <Toolbar>
+            Yahoo!ショッピングランキング
+          </Toolbar>
+        </AppBar>
 
         <Nav />
-
+        <div  style={{marginTop:64, padding:32}}>
         <Switch>
           <Route path="/all" component={Ranking} />
           <Route
@@ -26,6 +37,7 @@ class App extends Component {
           }
           />
         </Switch>        
+        </div>
       </div>
     );
   }
