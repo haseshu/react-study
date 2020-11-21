@@ -61,6 +61,8 @@ RUN npm install react-pose --save
 RUN npm install --save prop-types
 RUN npm install --save fetch-jsonp
 RUN npm install --save qs
+RUN npm install --save redux-mock-store jest-fetch-mock
+RUN npm install --save isomorphic-fetch
 #RUN create-react-app ikemen-checker
 #RUN npm start
 
