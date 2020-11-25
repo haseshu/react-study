@@ -6,9 +6,13 @@ import { ConnectedRouter } from 'connected-react-router';
 import App from './App';
 import './index.css';
 import { createBrowserHistory } from 'history';
+import { createHashHistory} from 'history';
 import createStore from './createStore';
 
-const history = createBrowserHistory();
+//ブラウザでやるときはこっち
+//const history = createBrowserHistory();
+//gitHubPagesでやるときはこっち
+const history = createHashHistory();
 
 const store = createStore(history);
 console.log(store.getState());
