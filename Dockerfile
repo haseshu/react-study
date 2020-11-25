@@ -64,6 +64,11 @@ RUN npm install --save qs
 RUN npm install --save redux-mock-store jest-fetch-mock
 RUN npm install --save isomorphic-fetch
 RUN npm install --save enzyme enzyme-adapter-react-16 react-test-renderer
+RUN npm remove react
+RUN npm remove react-dom
+RUN npm install --save react@16.14.0
+RUN npm install --save react-dom@16.14.0
+RUN npm install --save react-test-renderer
 #RUN create-react-app ikemen-checker
 #RUN npm start
 
