@@ -38,5 +38,5 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d build"
   },
-  "homepage": "https://haseshu.github.io/react-study/"
+  "homepage": "https://haseshu.github.io/react-study/flask/react-study/build/"
 }
